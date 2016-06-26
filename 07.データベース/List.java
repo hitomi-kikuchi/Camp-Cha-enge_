@@ -58,7 +58,7 @@ public class List extends HttpServlet {
             //sql文を定義する②
             db_ps = db_con.prepareStatement("select * from product");
             out.println("<center>");
-            out.print("<p>— 商品一覧 —</p>");
+            out.print("<h1>— 商品一覧 —</h1>");
             db_data = db_ps.executeQuery();
             while (db_data.next()) {
                 out.println("<br>商品名："+ db_data.getString("name") +

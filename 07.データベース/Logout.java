@@ -49,7 +49,7 @@ public class Logout extends HttpServlet {
             HttpSession hs = request.getSession(true);
             hs.invalidate();
             
-            response.sendRedirect("http://localhost:8080/Database/JDBC/DB13.jsp");
+            response.sendRedirect("/JDBC/Login.jsp");
 
         
     }

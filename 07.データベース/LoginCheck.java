@@ -71,11 +71,11 @@ public class LoginCheck extends HttpServlet {
                     HttpSession hs = request.getSession();
                     hs.getAttribute("Pass");
                     //ログイン成功時の画面へ飛ぶ
-                    RequestDispatcher rd = request.getRequestDispatcher("/JDBC/DB13_1.jsp");
+                    RequestDispatcher rd = request.getRequestDispatcher("/JDBC/Product.jsp");
                     rd.forward(request, response);
                 }else {
                     //ログイン画面に戻す
-                    response.sendRedirect("http://localhost:8080/Database/JDBC/DB13.jsp");
+                    response.sendRedirect("/Login.jsp");
                 }
             }
             
