@@ -17,7 +17,6 @@ import javax.servlet.http.HttpSession;
  *
  * @author 1999itukinao
  */
-
 //在庫管理システムを作成します。
 //まず、DBにユーザー情報管理テーブルと、商品情報登録テーブルを作成してください。
 //その上で、下記機能を実現してください。
