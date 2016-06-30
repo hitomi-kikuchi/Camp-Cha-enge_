@@ -18,7 +18,6 @@ import java.text.*;
  *
  * @author 1999itukinao
  */
-
 //課題9:フォームからデータを挿入できる処理を構築してください。
 
 public class DB09 extends HttpServlet {

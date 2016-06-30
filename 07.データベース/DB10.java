@@ -17,7 +17,6 @@ import java.sql.*;
  *
  * @author 1999itukinao
  */
-
 //課題10:profileIDで指定したレコードを削除できるフォームを作成してください
 
 public class DB10 extends HttpServlet {

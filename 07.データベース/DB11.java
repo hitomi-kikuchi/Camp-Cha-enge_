@@ -18,7 +18,6 @@ import java.sql.*;
  *
  * @author 1999itukinao
  */
-
 //課題11:profileIDで指定したレコードの、profileID以外の要素をすべて上書きできるフォームを作成してください
 
 public class DB11 extends HttpServlet {
