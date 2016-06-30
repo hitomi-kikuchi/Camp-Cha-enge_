@@ -45,8 +45,7 @@ public class DB10 extends HttpServlet {
             //受け取るパラメータの文字コード
             request.setCharacterEncoding("UTF-8");
             // データの受け取り
-            String i = request.getParameter("Id");
-            Integer id = Integer.parseInt(i);
+            Integer id = Integer.parseInt(request.getParameter("Id"));
             
             //JDBCドライバをロードする
             Class.forName("com.mysql.jdbc.Driver").newInstance();

@@ -41,19 +41,16 @@ public class DB09 extends HttpServlet {
         //変数を定義
         Connection db_con = null;
         PreparedStatement db_ps = null;
-        ResultSet db_data = null;
         
         try
         {
             //受け取るパラメータの文字コード
             request.setCharacterEncoding("UTF-8");
             // データの受け取り
-            String i = request.getParameter("Id");
-            Integer id = Integer.parseInt(i);
+            Integer id = Integer.parseInt(request.getParameter("Id"));
             String name = request.getParameter("Name");
             String tell = request.getParameter("Tell");
-            String a = request.getParameter("Age");
-            Integer age = Integer.parseInt(a);
+            Integer age = Integer.parseInt(request.getParameter("Age"));
             String year = request.getParameter("Year");
             String month = request.getParameter("Month");
             String day = request.getParameter("Day");
@@ -77,7 +74,6 @@ public class DB09 extends HttpServlet {
                 out.println("実行できませんでした <br>");
             }
             
-            db_data.close();
             db_ps.close();
             db_con.close();
             //例外発生時の処理
@@ -86,13 +82,6 @@ public class DB09 extends HttpServlet {
         } catch (Exception e) {        
             out.println("接続時にエラーが発生しました："+ e.toString());
         } finally {
-            if (db_data != null) {
-                try {
-                    db_data.close();
-                }catch (Exception e_data) {
-                    System.out.println(e_data.getMessage());
-                }
-            }
             if (db_ps != null) {
                 try {
                     db_ps.close();

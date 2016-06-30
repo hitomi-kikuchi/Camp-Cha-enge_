@@ -46,12 +46,10 @@ public class DB11 extends HttpServlet {
             //受け取るパラメータの文字コード
             request.setCharacterEncoding("UTF-8");
             // データの受け取り
-            String i = request.getParameter("Id");
-            Integer id = Integer.parseInt(i);
+            Integer id = Integer.parseInt(request.getParameter("Id"));
             String name = request.getParameter("Name");
             String tell = request.getParameter("Tell");
-            String a = request.getParameter("Age");
-            Integer age = Integer.parseInt(a);
+            Integer age = Integer.parseInt(request.getParameter("Age"));
             String year = request.getParameter("Year");
             String month = request.getParameter("Month");
             String day = request.getParameter("Day");

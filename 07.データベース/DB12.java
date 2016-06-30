@@ -49,8 +49,7 @@ public class DB12 extends HttpServlet {
             request.setCharacterEncoding("UTF-8");
             // データの受け取り
             String name = request.getParameter("Name");
-            String a = request.getParameter("Age");
-            Integer age = Integer.parseInt(a);
+            Integer age = Integer.parseInt(request.getParameter("Age"));
             String year = request.getParameter("Year");
             String month = request.getParameter("Month");
             String day = request.getParameter("Day");
@@ -60,12 +59,10 @@ public class DB12 extends HttpServlet {
             //DB接続情報を設定する
             db_con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Challenge_db", "root", "");
             //sql文を定義する
-            db_ps = db_con.prepareStatement("select * from profiles where name = ?");
+            db_ps = db_con.prepareStatement("select * from profiles where name = ? and age = ? and birthday = ?");
             db_ps.setString(1, name);
-            db_ps = db_con.prepareStatement("select * from profiles where age = ?");
-            db_ps.setInt(1, age);
-            db_ps = db_con.prepareStatement("select * from profiles where birthday = ?");
-            db_ps.setDate(1, new java.sql.Date(sdf.parse(year +"-"+ month +"-"+ day).getTime()));
+            db_ps.setInt(2, age);
+            db_ps.setDate(3, new java.sql.Date(sdf.parse(year +"-"+ month +"-"+ day).getTime()));
 
             db_data = db_ps.executeQuery();
             while (db_data.next()) {
