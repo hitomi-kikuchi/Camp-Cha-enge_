@@ -26,7 +26,7 @@
             <br>
             <br>
         生年月日：<select name="Year">
-            <option value="">--</option>
+            <option value="">----</option>
             <% for(int i = 1900; i<=2016; i++) { %>
             <option value="<%=i%>"><%=i%></option>
             <% } %>
