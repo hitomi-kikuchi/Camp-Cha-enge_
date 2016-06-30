@@ -18,6 +18,7 @@ import java.text.*;
  *
  * @author 1999itukinao
  */
+
 //課題12:検索用のフォームを用意し、名前、年齢、誕生日を使った複合検索ができるようにしてください。
 
 public class DB12 extends HttpServlet {
@@ -143,5 +144,4 @@ public class DB12 extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
 }
